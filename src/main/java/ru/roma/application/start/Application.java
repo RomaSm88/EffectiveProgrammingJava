@@ -5,8 +5,11 @@
 package ru.roma.application.start;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Application {
+
 
     public static void main(String[] args) {
 
@@ -42,6 +45,20 @@ public class Application {
         String messageExamle_5 = String.format("Example5: BebyBoomer: %s", example_5.isBabyBoomer());
         System.out.println(messageExamle_5);
 
+        // Пример использования переопределенных методов equals, hashCode
+        Example_9 phoneNumber1 = new Example_9((short) 11, (short) 12, (short) 445);
+        Example_9 phoneNumer2 = new Example_9((short) 11, (short) 15, (short) 4551);
+        Example_9 phoneNumer3 = new Example_9((short) 11, (short) 15, (short) 4551);
+
+        System.out.println("phoneNumer1 != phoneNumber2 => " + phoneNumber1.equals(phoneNumer2));
+        System.out.println("HashCode: " + phoneNumber1.hashCode() + " != " + phoneNumer2.hashCode());
+        System.out.println("phoneNumber2 == phoneNumber3 => " + phoneNumer2.equals(phoneNumer3));
+        System.out.println("HashCode: " + phoneNumer2.hashCode() + "==" + phoneNumer3.hashCode());
+        List<Example_9> arrayPhoneNumbers = new ArrayList<>();
+        arrayPhoneNumbers.add(phoneNumber1);
+        arrayPhoneNumbers.add(phoneNumer2);
+        arrayPhoneNumbers.add(phoneNumer3);
+        System.out.println("PhoneNumbers: " +  arrayPhoneNumbers.toString());
 
     }
 }
