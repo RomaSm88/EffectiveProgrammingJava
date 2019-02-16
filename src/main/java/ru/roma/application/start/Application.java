@@ -59,6 +59,5 @@ public class Application {
         arrayPhoneNumbers.add(phoneNumer2);
         arrayPhoneNumbers.add(phoneNumer3);
         System.out.println("PhoneNumbers: " +  arrayPhoneNumbers.toString());
-
     }
 }
