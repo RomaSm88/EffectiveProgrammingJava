@@ -23,7 +23,7 @@ public class Application {
 
 
         // Пример создания объектов, с помошью шаблона Builder.
-        Example_2 example2AndCalories = new Example_2.Builder(10,5).calories(100).build();
+        Example_2 example2AndCalories = new Example_2.Builder(10, 5).calories(100).build();
         Example_2 example2FullParametrs = new Example_2.Builder(5, 4).calories(10).carbohydrate(1)
                 .fat(12).sodium(55).build();
 
@@ -58,6 +58,7 @@ public class Application {
         arrayPhoneNumbers.add(phoneNumber1);
         arrayPhoneNumbers.add(phoneNumer2);
         arrayPhoneNumbers.add(phoneNumer3);
-        System.out.println("PhoneNumbers: " +  arrayPhoneNumbers.toString());
+        System.out.println("PhoneNumbers: " + arrayPhoneNumbers.toString());
+        System.out.println("Test123");
     }
 }

@@ -18,6 +18,53 @@ public class Example_2 {
     private final int sodium;
     private final int carbohydrate;
 
+    private Example_2(Builder builder) {
+
+        this.servings = builder.servings;
+        this.servingSize = builder.servingSize;
+        this.calories = builder.calories;
+        this.fat = builder.fat;
+        this.carbohydrate = builder.carbohydrate;
+        this.sodium = builder.sodium;
+
+    }
+
+    public int getServingSize() {
+        return servingSize;
+    }
+
+    public int getServings() {
+        return servings;
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public int getFat() {
+        return fat;
+    }
+
+    public int getSodium() {
+        return sodium;
+    }
+
+    public int getCarbohydrate() {
+        return carbohydrate;
+    }
+
+    @Override
+    public String toString() {
+        return "Example_2{" +
+                "servingSize=" + servingSize +
+                ", servings=" + servings +
+                ", calories=" + calories +
+                ", fat=" + fat +
+                ", sodium=" + sodium +
+                ", carbohydrate=" + carbohydrate +
+                '}';
+    }
+
     public static class Builder {
 
         // Обязательные параметры при созлании объекта
@@ -67,52 +114,5 @@ public class Example_2 {
 
             return new Example_2(this);
         }
-    }
-
-    private Example_2(Builder builder) {
-
-        this.servings = builder.servings;
-        this.servingSize = builder.servingSize;
-        this.calories = builder.calories;
-        this.fat = builder.fat;
-        this.carbohydrate = builder.carbohydrate;
-        this.sodium = builder.sodium;
-
-    }
-
-    public int getServingSize() {
-        return servingSize;
-    }
-
-    public int getServings() {
-        return servings;
-    }
-
-    public int getCalories() {
-        return calories;
-    }
-
-    public int getFat() {
-        return fat;
-    }
-
-    public int getSodium() {
-        return sodium;
-    }
-
-    public int getCarbohydrate() {
-        return carbohydrate;
-    }
-
-    @Override
-    public String toString() {
-        return "Example_2{" +
-                "servingSize=" + servingSize +
-                ", servings=" + servings +
-                ", calories=" + calories +
-                ", fat=" + fat +
-                ", sodium=" + sodium +
-                ", carbohydrate=" + carbohydrate +
-                '}';
     }
 }
