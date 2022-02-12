@@ -16,6 +16,12 @@ public class Example_2_2 {
     private final int servings;
 
 
+    private Example_2_2(Builder builder) {
+
+        this.servings = builder.servings;
+        this.servingSize = builder.servingSize;
+    }
+
     public static class Builder implements ru.roma.application.start.Builder<Example_2> {
 
         // Обязательные параметры при созлании объекта
@@ -35,12 +41,6 @@ public class Example_2_2 {
             return new Example_2.Builder(servingSize, servings).build();
 
         }
-    }
-
-    private Example_2_2(Builder builder) {
-
-        this.servings = builder.servings;
-        this.servingSize = builder.servingSize;
     }
 
 }

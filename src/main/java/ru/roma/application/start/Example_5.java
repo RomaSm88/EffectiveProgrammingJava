@@ -14,20 +14,17 @@ import java.time.Month;
  */
 public class Example_5 {
 
-    private LocalDate birthDate;
-
-
+    // Определяем интервал времени периода беби-бума
+    private static final LocalDate BOOM_START = LocalDate.of(1945, Month.JANUARY, 1);
+    private static final LocalDate BOOM_END = LocalDate.of(1965, Month.JANUARY, 1);
+    private final LocalDate birthDate;
     public Example_5(LocalDate birthDate) {
 
         this.birthDate = birthDate;
     }
 
-    // Определяем интервал времени периода беби-бума
-    private static final LocalDate BOOM_START = LocalDate.of(1945, Month.JANUARY, 1);
-    private static final LocalDate BOOM_END = LocalDate.of(1965, Month.JANUARY, 1);
-
     // Метод, говорит, относится ли переданное значение birthDate к периоду буби-бума
-    public boolean isBabyBoomer()  {
+    public boolean isBabyBoomer() {
 
         return birthDate.compareTo(BOOM_START) >= 0 &&
                 birthDate.compareTo(BOOM_END) < 0;

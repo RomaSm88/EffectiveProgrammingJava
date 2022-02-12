@@ -22,9 +22,16 @@ public final class Example_9 {
         rangeCheck(areaCode, 999, "area code");
         rangeCheck(prefix, 999, "prefix");
         rangeCheck(lineNumber, 9999, "line number");
-        this.areaCode = (short) areaCode;
-        this.prefix = (short) prefix;
-        this.lineNumber = (short) lineNumber;
+        this.areaCode = areaCode;
+        this.prefix = prefix;
+        this.lineNumber = lineNumber;
+    }
+
+    private static void rangeCheck(int arg, int max, String name) {
+
+        if (arg < 0 || arg > max) {
+            throw new IllegalArgumentException(name + ":" + arg);
+        }
     }
 
     public short getAreaCode() {
@@ -37,14 +44,6 @@ public final class Example_9 {
 
     public short getLineNumber() {
         return lineNumber;
-    }
-
-
-    private static void rangeCheck(int arg, int max, String name) {
-
-        if (arg < 0 || arg > max) {
-            throw new IllegalArgumentException(name + ":" + arg);
-        }
     }
 
     @Override

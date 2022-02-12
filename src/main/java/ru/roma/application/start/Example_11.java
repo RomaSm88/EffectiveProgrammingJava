@@ -8,5 +8,4 @@ package ru.roma.application.start;
 public class Example_11 {
 
 
-
 }

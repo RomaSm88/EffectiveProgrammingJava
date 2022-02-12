@@ -7,7 +7,7 @@ package ru.roma.application.start;
 public class Example_1 {
 
 
-    private Integer value;
+    private final Integer value;
 
 
     public Example_1() {
@@ -23,8 +23,7 @@ public class Example_1 {
     /**
      * 1-ый пример
      * Фабричный метод, который создает экземпляр объекта Example_1
-     * @param value
-     * @return
+     *
      */
     public static Example_1 valueOf(int value) {
 
@@ -34,7 +33,7 @@ public class Example_1 {
 
     /**
      * 2-ой пример фабричного метода.
-     * @return
+     *
      */
     public static Example_1 valueOf() {
 
